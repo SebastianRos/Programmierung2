@@ -9,8 +9,8 @@ public class IterableUtil {
 		FeldPFix<String> feld = new FeldPFix<String>(4);
 		feld.set(0, "d");
 		feld.set(1, "c");
-		feld.set(2, "a");
-		feld.set(3, "b");
+		feld.set(2, "Y");
+		feld.set(3, "X");
 		Iterable<String> feldi = new Iterable<String>(){
 			public Iterator<String> iterator() {
 				return feld.iterator();
