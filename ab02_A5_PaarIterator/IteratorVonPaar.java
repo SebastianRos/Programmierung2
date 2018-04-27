@@ -6,7 +6,7 @@ import java.util.Iterator;
 public class IteratorVonPaar<E, Z> implements Iterator<Paar<E, Z>>{
     private Iterator<E> iE;
     private Iterator<Z> iZ;
-    int pos;
+    private int pos;
 
     public IteratorVonPaar(Iterator<E> pIE, Iterator<Z> pIZ){
         iE = pIE;
@@ -15,10 +15,7 @@ public class IteratorVonPaar<E, Z> implements Iterator<Paar<E, Z>>{
     }
 
     public boolean hasNext() {
-        if (iE.hasNext() && iZ.hasNext()){
-            return true;
-        }
-        return false;
+        return (iE.hasNext() && iZ.hasNext());
     }
 
     public Paar<E, Z> next() {

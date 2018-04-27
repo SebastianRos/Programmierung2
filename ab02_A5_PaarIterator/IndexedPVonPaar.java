@@ -38,9 +38,6 @@ public class IndexedPVonPaar<E,Z> implements IndexedP<Paar<E, Z>> {
 	public Paar<E, Z> get(int p){
 		return new Paar<>(e.get(p), z.get(p));
 	}
-	public Paar<IndexedP<E>, IndexedP<Z>> paarVonIndexedP(){
-		return null; //TODO Implementieren
-	}
 	public Paar<E, Z> set(int p, Paar<E, Z> v){
 		return new Paar<>(e.set(p, v.erstes()), z.set(p, v.zweites()));
 	}
@@ -48,7 +45,10 @@ public class IndexedPVonPaar<E,Z> implements IndexedP<Paar<E, Z>> {
 		e.swap(p,q);
 		z.swap(p, q);
 	}
-	
+	protected Paar<IndexedP<E>, IndexedP<Z>> paarVonIndexedP(){
+		return new Paar<>(e, z);
+	}
+
 	public String toString() {
 		String output = "";
 		for (int i = 0; i < size(); i++) {
