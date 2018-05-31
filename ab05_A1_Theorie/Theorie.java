@@ -4,8 +4,8 @@ public class Theorie {
 
 	public static void main(String[] args) {
 		K k = new K();
-		A z = k.f(new B[8], new FeldPFix<D>(8));
-		System.out.println(z instanceof Object);
+		Object z = k.g(new FeldPFix<FeldP<C>>(8), new FeldPFix<FeldP>(8));
+		System.out.println("Hallo");
 	}
 	
 	public class A{};
